@@ -1,4 +1,4 @@
-on property:dev.bootcomplete=1
+on property:init.svc.bootanim=running
     # The display is somehow set to the wrong mode
     # even when we have already removed all non-default
     # modes from kernel device tree.
