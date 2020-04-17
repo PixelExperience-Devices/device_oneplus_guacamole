@@ -2,6 +2,6 @@
   {
     "repository"   : "device_oneplus_sm8150-common",
     "target_path"  : "device/oneplus/sm8150-common",
-    "branch"       : "ten"
+    "branch"       : "ten-wip"
   }
 ]
