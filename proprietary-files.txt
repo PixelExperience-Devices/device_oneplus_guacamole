@@ -124,3 +124,8 @@ vendor/lib64/hw/vibrator.default.so
 vendor/lib64/hw/android.hardware.vibrator@1.0-impl.so
 vendor/etc/init/android.hardware.vibrator@1.0-service.rc
 vendor/bin/hw/android.hardware.vibrator@1.0-service
+
+# Vibrator firmware
+vendor/firmware/notif_Ardour.bin
+vendor/firmware/notif_Chic.bin
+vendor/firmware/ring_McLarn.bin
