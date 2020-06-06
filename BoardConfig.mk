@@ -14,9 +14,6 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus7Pro
 # Display
 TARGET_SCREEN_DENSITY := 560
 
-# Kernel
-TARGET_KERNEL_CONFIG := vendor/sm8150-perf_defconfig
-
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_guacamole
 TARGET_RECOVERY_DEVICE_MODULES := libinit_guacamole
