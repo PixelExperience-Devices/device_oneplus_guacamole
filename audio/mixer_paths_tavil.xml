@@ -196,6 +196,17 @@
 <!-- wangbuqing,add USB RX default config,20180620,add Start -->
     <ctl name="USB_AUDIO_RX SampleRate" value="KHZ_48" />
 <!-- wangbuqing,add USB RX default config,20180620,add END -->
+<!-- #ifdef VENDOR_EDIT -->
+<!-- dujie@MM.Audio, 2019/09/20, add for ktv loopback -->
+    <ctl name="SLIMBUS_6_RX Port Mixer SLIM_1_TX" value="0" />
+    <ctl name="USB_AUDIO_RX Port Mixer USB_AUDIO_TX" value="0" />
+    <ctl name="USB_DL_HL Switch" value="0" />
+<!-- yewenliang@MM.Audio, 2020/03/10, add for ktv loopback -->
+    <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia6" value="0" />
+    <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia6" value="0" />
+    <ctl name="MultiMedia6 Mixer USB_AUDIO_TX" value="0" />
+    <ctl name="MultiMedia6 Mixer SLIM_1_TX" value="0" />
+<!-- #endif -->
     <ctl name="MultiMedia6 Mixer SLIM_0_TX" value="0" />
     <ctl name="SLIM_2_RX Format" value="UNPACKED" />
     <ctl name="SLIM_2_RX SampleRate" value="KHZ_48" />
@@ -632,6 +643,8 @@
     <ctl name="QUAT_MI2S_RX Audio Mixer Ultrasound" value="0" />
     <!-- Stereo or mono smart pa controls -->
     <ctl name="TFA_CHIP_SELECTOR" value="0" />
+    <!-- yewenliang@MM.Audio, 2019/11/21, add for close pa -->
+    <ctl name="Tfa Enable" value="1" />
     <ctl name="stereo Profile" value="speaker" />
     <!-- Ultrasound default settings-->
     <ctl name="Ultrasound Event" value="0" />
@@ -1823,6 +1836,23 @@
     <path name="audio-record pa-fb">
         <ctl name="MultiMedia1 Mixer QUAT_MI2S_TX" value="1" />
     </path>
+
+<!-- yewenliang@MM.Audio, 2020/03/10, add for ktv loopback -->
+    <path name="audio-ktv-loopback-rx headphones">
+        <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia6" value="1" />
+    </path>
+
+    <path name="audio-ktv-loopback-rx usb-headset">
+        <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia6" value="1" />
+    </path>
+
+    <path name="audio-ktv-loopback-tx headset-mic">
+        <ctl name="MultiMedia6 Mixer SLIM_1_TX" value="1" />
+    </path>
+
+    <path name="audio-ktv-loopback-tx usb-headset-mic">
+        <ctl name="MultiMedia6 Mixer USB_AUDIO_TX" value="1" />
+    </path>
 <!-- #endif -->
 
     <path name="audio-record headset-mic">
@@ -2590,6 +2620,11 @@
    <path name="speaker-ext-1">
    </path>
 
+    <!-- yewenliang@MM.Audio, 2019/11/21, add for close pa -->
+    <path name="speaker-dummy">
+        <ctl name="Tfa Enable" value="0" />
+   </path>
+
 <!-- suzhiguang,for speaker MMI test -->
 <!--#ifdef VENDOR_EDIT
 //dujie@MM.Audio, 2019/05/21, add receiver-mmi mixer path -->
@@ -2801,6 +2836,13 @@
         <path name="amic4" />
 <!-- #endif VENDOR_EDIT-->
     </path>
+
+<!-- ifdef VENDOR_EDIT -->
+<!-- liuhaituo@MM.Audio, 2019/12/31, Add for Sva record training wav -->
+    <path name="sva-re-mic">
+        <path name="amic1" />
+    </path>
+<!-- endif -->
 
 <!--#ifdef VENDOR_EDIT  -->
     <path name="handset-mic-karaoke">
@@ -3018,6 +3060,18 @@
         <ctl name="DEC0 Volume" value="84" />
     </path>
 
+<!-- #ifdef VENDOR_EDIT -->
+<!-- dujie@MM.Audio, 2019/09/20, add for ktv loopback -->
+    <path name="headset-mic-ktv">
+        <path name="amic2" />
+        <ctl name="ADC2 Volume" value="8" />
+        <ctl name="DEC1 Volume" value="82" />
+    </path>
+
+    <path name="usb-headset-mic-ktv">
+    </path>
+<!-- #endif -->
+
     <path name="headset-mic-liquid">
         <path name="amic2" />
     </path>
@@ -3218,6 +3272,10 @@
 
     <path name="voice-rec-mic">
         <path name="handset-mic" />
+<!-- ifdef VENDOR_EDIT -->
+        <ctl name="ADC4 Volume" value="6" />
+        <ctl name="DEC0 Volume" value="74" />
+<!-- endif -->
     </path>
 
     <path name="camcorder-mic">
@@ -3852,7 +3910,7 @@
         <path name="unprocessed-handset-mic" />
 <!-- ifdef VENDOR_EDIT -->
         <ctl name="ADC4 Volume" value="6" />
-        <ctl name="DEC0 Volume" value="62" />
+        <ctl name="DEC0 Volume" value="78" />
 <!-- endif -->
     </path>
 
