@@ -2202,6 +2202,14 @@
     </path>
 
 <!-- #ifdef VENDOR_EDIT -->
+<!-- zhangrun@MM.Audio,2020/04/21, add for Hearing Aid feature-->
+    <path name="voicemmode1-call hearing-aid">
+        <ctl name="AFE_PCM_RX_Voice Mixer VoiceMMode1" value="1"/>
+        <ctl name="VoiceMMode1_Tx Mixer SLIM_0_TX_MMode1" value="1"/>
+    </path>
+<!--#endif-->
+
+<!-- #ifdef VENDOR_EDIT -->
 <!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->
     <path name="voicemmode1-call quat_i2s">
         <ctl name="VOC_EXT_EC MUX" value="QUAT_MI2S_RX" />
@@ -2836,6 +2844,13 @@
         <path name="amic4" />
 <!-- #endif VENDOR_EDIT-->
     </path>
+
+<!-- #ifdef VENDOR_EDIT -->
+<!-- zhangrun@MM.Audio,2020/04/21, add for Hearing Aid feature-->
+    <path name="hearing-aid-mic">
+        <path name="amic4" />
+    </path>
+<!--#endif-->
 
 <!-- ifdef VENDOR_EDIT -->
 <!-- liuhaituo@MM.Audio, 2019/12/31, Add for Sva record training wav -->
