@@ -1,0 +1,14 @@
+[
+  {
+    "repository"   : "device_oneplus_sm8150-common",
+    "target_path"  : "device/oneplus/sm8150-common",
+    "remote"       : "pixel-devices",
+    "branch"       : "eleven"
+  },
+  {
+    "repository"  : "vendor_oneplus_guacamole",
+    "target_path" : "vendor/oneplus/guacamole",
+    "branch"      : "eleven",
+    "remote"      : "pixel-devices-blobs"
+  }
+]
