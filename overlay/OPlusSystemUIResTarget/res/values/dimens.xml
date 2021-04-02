@@ -21,5 +21,8 @@
     <dimen name="keyguard_carrier_text_margin">95px</dimen>
 
     <dimen name="keyguard_indication_margin_bottom">15dp</dimen>
+    
+    <!-- Location on the screen of the center of the physical power button. -->
+    <dimen name="physical_power_button_center_screen_location_y">1250px</dimen>
 
 </resources>
