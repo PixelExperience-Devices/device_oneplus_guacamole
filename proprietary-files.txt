@@ -112,6 +112,7 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
 
 # Fingerprint
 vendor/lib/hw/goodix.fod.msmnile.so
