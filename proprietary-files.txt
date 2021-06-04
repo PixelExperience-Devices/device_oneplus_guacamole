@@ -201,3 +201,10 @@ vendor/etc/sensors/config/tcs3701.json
 vendor/etc/sensors/sns_reg_config
 vendor/lib/sensors.ssc.so
 vendor/lib64/sensors.ssc.so
+
+# Vibrator Firmware
+vendor/firmware/aw8697_haptic_166.bin
+vendor/firmware/aw8697_haptic_168.bin
+vendor/firmware/aw8697_haptic_170.bin
+vendor/firmware/aw8697_haptic_172.bin
+vendor/firmware/aw8697_haptic_174.bin
