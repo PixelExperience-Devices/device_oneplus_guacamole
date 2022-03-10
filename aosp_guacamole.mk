@@ -26,6 +26,7 @@ PRODUCT_SYSTEM_DEVICE := OnePlus7Pro
 
 # Pixel Experience stuff
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_USES_AOSP_RECOVERY := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
