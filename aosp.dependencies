@@ -12,9 +12,9 @@
     "remote"      : "pixel-devices-blobs"
   },
   {
-    "repository": "vendor_oneplus-firmware",
-    "target_path": "vendor/oneplus/firmware",
-    "branch": "thirteen",
-    "remote": "pixel-devices-blobs"
-  },
+    "repository"  : "vendor_oneplus-firmware",
+    "target_path" : "vendor/oneplus/firmware",
+    "branch"      : "thirteen",
+    "remote"      : "pixel-devices-blobs"
+  }
 ]
